@@ -15,13 +15,14 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 
 import { ValidateService } from "./services/validate.service";
 import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth.guard";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'gallery', component: GalleryComponent}
+  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path: 'gallery', component: GalleryComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ValidateService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
