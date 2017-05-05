@@ -1,0 +1,27 @@
+<nav class="nav navbar navbar-default">
+  <!--<div class="navbar-header">-->
+    <a [routerLink]="['/']" class="navbar-brand">Pic Share</a>
+    <!--<button type="button" class="navbar-toggle collapsed" data-toggle=collapse>
+      <span class="sr-only">Toggle Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>-->
+  <!--<div id="navbar" class="collapse navbar-collapse"> -->
+    <ul class="nav navbar-nav navbar-right">   
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="['/']">Home</a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="['/login']">Login</a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="['/register']">Register</a>
+      </li>
+    </ul>
+  <!--</div>-->
+</nav>

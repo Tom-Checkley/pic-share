@@ -1,0 +1,34 @@
+{
+  "name": "pic-share",
+  "version": "1.0.0",
+  "description": "Picture sharing website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom-Checkley/pic-share.git"
+  },
+  "keywords": [
+    "Photos",
+    "MEAN"
+  ],
+  "author": "Tom Checkley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tom-Checkley/pic-share/issues"
+  },
+  "homepage": "https://github.com/Tom-Checkley/pic-share#readme"
+}

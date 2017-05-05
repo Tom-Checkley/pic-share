@@ -1,0 +1,44 @@
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.loader>* {
+    height: 3em;
+    width: 1em;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 4px;
+    animation: grow 1.6s infinite ease-in-out;
+}
+
+.loader2 {
+    animation-delay: -1.5s;
+}
+
+.loader3 {
+    animation-delay: -1.4s;
+}
+
+.loader4 {
+    animation-delay: -1.3s;
+}
+
+.loader5 {
+    animation-delay: -1.2s;
+}
+
+.loader6 {
+    animation-delay: -1.1s;
+}
+
+@keyframes grow {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(1.0);
+    }
+    20% {
+        transform: scaleY(1.75);
+    }
+}

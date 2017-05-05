@@ -1,0 +1,10 @@
+body {
+    color: $text-color;
+    background: $base-color-dark url('assets/img/camera2-port.jpg') no-repeat center center;
+    @include mq(large) {
+        background-image: url('assets/img/camera2-land.jpg')
+    }
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    background-size: cover;
+}
