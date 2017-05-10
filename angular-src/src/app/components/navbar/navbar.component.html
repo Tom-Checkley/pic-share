@@ -9,7 +9,7 @@
         <a [routerLink]="['/profile']">Profile</a>
       </li>
       <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item">
-        <a [routerLink]="['/upload']">Upload</a>
+        <a [routerLink]="['/upload-images']">Upload</a>
       </li>
       <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-item">
         <a [routerLink]="['/gallery']">Gallery</a>
