@@ -4,7 +4,8 @@ const express = require('express'),
   cors = require('cors'),
   passport = require('passport'),
   mongoose = require('mongoose'),
-  config = require('./config/database');
+  config = require('./config/database'),
+  multer = require('multer');
 
 /*
  *		DATABASE

@@ -33,9 +33,7 @@ const appRoutes: Routes = [
     HomeComponent,
     ProfileComponent,
     LoginComponent,
-    RegisterComponent,
-    GalleryComponent,
-    UploadComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
