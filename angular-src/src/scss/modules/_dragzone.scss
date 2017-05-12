@@ -1,0 +1,13 @@
+.dragzone {
+  width: 40vh;
+  height: 40vh;
+  border: $base-color dashed .5em;
+  color: $base-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include e(glyph) {
+    font-size: 4em;
+  }
+}
