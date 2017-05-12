@@ -11,10 +11,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 import { ValidateService } from "./services/validate.service";
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from "./guards/auth.guard";
+
 
 
 const appRoutes: Routes = [
@@ -23,7 +25,7 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   // {path: 'gallery', component: GalleryComponent, canActivate:[AuthGuard]},
-  // {path: 'upload-images', component: UploadComponent, canActivate:[AuthGuard]}
+  {path: 'upload-images', component: UploadComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ProfileComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
