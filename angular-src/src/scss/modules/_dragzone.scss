@@ -1,13 +1,36 @@
 .dragzone {
   width: 40vh;
   height: 40vh;
-  border: $base-color dashed .5em;
+  border: $base-color dashed 6px;
   color: $base-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.25em;
+  text-align: center;
   @include e(glyph) {
-    font-size: 4em;
+    font-size: 3em;
+  }
+  @include e(input) {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .strong-text {
+    font-size: 1.25em;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.upload {
+  @include e(submit) {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
 }

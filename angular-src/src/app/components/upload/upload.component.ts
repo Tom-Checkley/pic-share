@@ -12,4 +12,9 @@ export class UploadComponent implements OnInit {
   ngOnInit() {
   }
 
+  isAdvancedUpload() {
+    let div = document.createElement('div');
+    return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+  }
+
 }
