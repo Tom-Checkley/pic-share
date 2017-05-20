@@ -3,8 +3,7 @@ const express = require('express'),
   passport = require('passport'),
   jwt = require('jsonwebtoken'),
   config = require('../config/database'),
-  multer = require('multer'),
-  upload = multer({ dest: 'uploads/' });
+  multer = require('multer');
 
 
 const User = require('../models/user'),
@@ -69,5 +68,23 @@ router.get('/profile', passport.authenticate('jwt', { session: false }), (req, r
   res.json({ user: req.user });
 });
 
+// Upload Images
+const storage = multer.diskStorage({
+
+  destination: function(req, file, cb) {
+    cb(null, './uploads/')
+  },
+
+  filename: function(req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+const upload = multer({ storage: storage });
+
+router.post("/upload", upload.array("uploads[]", 12), function(req, res) {
+  console.log('files', req.files);
+  res.send(req.files);
+});
 
 module.exports = router;

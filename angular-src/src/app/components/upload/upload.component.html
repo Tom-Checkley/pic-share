@@ -1,11 +1,11 @@
 <div class="full-page">
   <div>
     <h2 class="page-header">Upload Photos</h2>
-    <form enctype="multipart/form-data" method="post" class="upload">
+    <form enctype="multipart/form-data" class="upload" (submit)="upload()">
       <div id="dragzone" class="dragzone">
         <i class="glyphicon glyphicon-open dragzone__glyph"></i><br/>
         <label for="file" class="dragzone__label"><strong class="strong-text">Click here</strong><br/><span *ngIf="isAdvancedUpload()"> or drag files to upload</span></label>
-        <input type="file" name="file" id="file" value="Upload Photo" class="dragzone__input">
+        <input type="file" name="file" id="file" value="Upload Photo" class="dragzone__input" (change)="fileChangeEvent($event)" multiple>
       </div>
       <input type="submit" name="upload" value="Upload Now" class="btn btn-primary upload__submit">
     </form>

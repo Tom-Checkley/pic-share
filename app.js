@@ -5,7 +5,8 @@ const express = require('express'),
   passport = require('passport'),
   mongoose = require('mongoose'),
   config = require('./config/database'),
-  multer = require('multer');
+  multer = require('multer'),
+  fs = require('fs');
 
 /*
  *		DATABASE
@@ -52,6 +53,7 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 app.use('/users', users);
+
 
 // Index Route
 app.get('/', (req, res) => {
